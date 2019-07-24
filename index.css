@@ -17,6 +17,27 @@ body {
     margin-top: 4%;
     justify-content: center;
 }
+.col {
+    flex-direction: column;
+    align-content: center;
+}
+form {
+    width: 80%;
+    margin: 10px;
+}
+.btn {
+    padding: 10px;
+    border-radius: 4px;
+    background: #44ff00;
+    border: 1px solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    color:#333;
+    cursor: pointer;
+}
+.add-book-fields {
+    display: flex;
+    flex-direction: column;
+}
 .book-card {
     padding: 10px;
     font-size: 25px;

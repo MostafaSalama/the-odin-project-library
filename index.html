@@ -7,18 +7,34 @@
 </head>
 <body>
 <section class="new-book">
-   <div class="container">
+   <div class="container col">
        <div class="add-book">
            <div class="new-book-btn">
                <button class="btn add-book-btn" id="add-book-btn">New Book</button>
            </div>
        </div>
-       <div>
+       <div class="add-book-fields" id="fields">
+           <div class="input-fields">
+               <form>
+                   <label>
+                       <input type="text" name="author" placeholder="author" id="book-author-input">
+                   </label>
+                   <label>
+                       <input type="text" name="name" placeholder="name" id="book-name-input">
+                   </label>
+                   <label>
+                       <input type="number" name="pages" placeholder="pages" id="book-pages-input">
+                   </label>
+                   <label>
+                       <input type="checkbox" name="read_statue" placeholder="read" id="book-read-statue-input"> read
+                   </label>
+               </form>
+           </div>
+           <div class="submit-book">
+               <button class="btn submit-book-btn" id="submit-book-btn">Submit</button>
+           </div>
+       </div>
 
-       </div>
-       <div class="submit-book">
-           <button class="btn submit-book-btn" id="submit-book-btn">Submit</button>
-       </div>
    </div>
 </section>
 <section>
