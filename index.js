@@ -15,12 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	addBookBtn.addEventListener('click', displayBookFields(true));
 	const app = {
 		library: ['good for the glory'],
+        container:document.getElementById('books-container') ,
 		render() {
+		    // first clear the container
+            this.clearUI() ;
 			for (let book of this.library) {
+
 			}
 		},
         addBook(book){
-		    this.library.push(book)
+		    this.library = [book,...this.library]
         },
         createBookDiv(book){
 		    const div = document.createElement('div') ;
@@ -41,7 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		    label.appendChild(checkBox);
 		    label.append('Read') ;
-		    return div ; 
+		    return div ;
+        },
+        clearUI(){
+		    this.container.innerHTML = '' ;
         }
 	};
 
