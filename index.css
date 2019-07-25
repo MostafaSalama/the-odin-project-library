@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    background: #EDEDED;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-top: 4%;
+    justify-content: center;
+}
+.col {
+    flex-direction: column;
+    align-content: center;
+}
+form {
+    width: 80%;
+    margin: 10px;
+}
+#fields {
+    display: none;
+}
+.btn {
+    padding: 10px;
+    border-radius: 4px;
+    background: #44ff00;
+    border: 1px solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    color:#333;
+    cursor: pointer;
+}
+.add-book-fields {
+    display: flex;
+    flex-direction: column;
+}
+.book-card {
+    padding: 10px;
+    font-size: 25px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    border-top: 2px solid #44ff00;
+
+    margin:10px;
+}
+.book-card span {
+    color: rgba(0,0,0,0.7);
+}
