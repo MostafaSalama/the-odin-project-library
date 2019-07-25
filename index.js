@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         buttons
      */
 	const addBookBtn = document.getElementById('add-book-btn');
+    const BookListContainer = document.getElementById('books-container') ;
 
 	function displayBookFields(b) {
 		return function() {
@@ -20,6 +21,27 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
         addBook(book){
 		    this.library.push(book)
+        },
+        createBookDiv(book){
+		    const div = document.createElement('div') ;
+		    div.classList.add('book-card') ;
+
+		    const pAuthor = document.createElement('p');
+		    const pName = document.createElement('p');
+
+		    const label = document.createElement('label') ;
+		    const checkBox = document.createElement('input');
+		    checkBox.setAttribute('type','checkbox') ;
+		    checkBox.checked = book.isRead ;
+
+		    pAuthor.classList.add('book-card-author');
+		    pAuthor.innerHTML = `<span>Author: </span> ${book.author}` ;
+		    pName.classList.add('book-card-name')
+            pName.innerHTML = `<span>Name: </span> ${book.name}` ;
+
+		    label.appendChild(checkBox);
+		    label.append('Read') ;
+		    return div ; 
         }
 	};
 
