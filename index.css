@@ -25,6 +25,9 @@ form {
     width: 80%;
     margin: 10px;
 }
+#fields {
+    display: none;
+}
 .btn {
     padding: 10px;
     border-radius: 4px;
